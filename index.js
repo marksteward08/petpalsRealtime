@@ -9,7 +9,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: 'https://af1f-103-66-143-249.ngrok-free.app', // Ensure this matches the client's origin
+        origin: 'https://1c7b-103-66-143-249.ngrok-free.app', // Ensure this matches the client's origin
         methods: ["GET", "POST"],
         allowedHeaders: ["my-custom-header"],
         credentials: true
@@ -19,7 +19,7 @@ const io = new Server(server, {
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('A realtime integration for PetPals');
 });
 
 io.on('connection', (socket) => {
