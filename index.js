@@ -19,7 +19,7 @@ const io = new Server(server, {
 app.use(cors());
 
 app.get('/', (req, res) => {
-    res.send('Hello World');
+    res.send('A realtime integration for PetPals');
 });
 
 io.on('connection', (socket) => {
